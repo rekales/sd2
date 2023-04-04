@@ -1,0 +1,6 @@
+1. install libraries
+pip install --upgrade torch diffusers transformers accelerate
+
+2. run get_pretrained_model.py
+
+3. run generate_dataset_images.py
