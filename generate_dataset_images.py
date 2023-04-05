@@ -105,4 +105,4 @@ for itergen in range(1000):
     images = (image * 255).round().astype("uint8")
     pil_images = [Image.fromarray(image) for image in images]
 
-    pil_images[0].save(str(int(sample.iloc[0]['SAMPLE_ID']))+".png")
+    pil_images[0].save("generated/"+str(int(sample.iloc[0]['SAMPLE_ID']))+".png")
