@@ -1,6 +1,6 @@
 from diffusers import StableDiffusionPipeline
 
-pipe = StableDiffusionPipeline.from_pretrained("./ds-2-1-base")
+pipe = StableDiffusionPipeline.from_pretrained("./pretrained/ds-2-1-base")
 pipe = pipe.to("cuda")
 
 prompt = "abstract realism art fusion"

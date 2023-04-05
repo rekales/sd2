@@ -19,14 +19,14 @@ from tqdm.auto import tqdm
 
 
 # 1. Load the autoencoder model which will be used to decode the latents into image space. 
-vae = AutoencoderKL.from_pretrained("stabilityai/stable-diffusion-2-1-base", subfolder="vae")
+vae = AutoencoderKL.from_pretrained("./pretrained/ds-2-1-base", subfolder="vae")
 
 # 2. Load the tokenizer and text encoder to tokenize and encode the text. 
-tokenizer = CLIPTokenizer.from_pretrained("stabilityai/stable-diffusion-2-1-base", subfolder="tokenizer")
-text_encoder = CLIPTextModel.from_pretrained("stabilityai/stable-diffusion-2-1-base", subfolder="text_encoder")
+tokenizer = CLIPTokenizer.from_pretrained("./pretrained/ds-2-1-base", subfolder="tokenizer")
+text_encoder = CLIPTextModel.from_pretrained("./pretrained/ds-2-1-base", subfolder="text_encoder")
 
 # 3. The UNet model for generating the latents.
-unet = UNet2DConditionModel.from_pretrained("stabilityai/stable-diffusion-2-1-base", subfolder="unet")
+unet = UNet2DConditionModel.from_pretrained("./pretrained/ds-2-1-base", subfolder="unet")
 
 
 scheduler = LMSDiscreteScheduler(beta_start=0.00085, beta_end=0.012, beta_schedule="scaled_linear", num_train_timesteps=1000)
