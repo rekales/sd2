@@ -35,5 +35,10 @@ for filename in gen_list:
 
     # scale image
     img = img.resize((512, 512))
-    
-    img.save("./natural_images/" + filename)
+    try:
+        img.save("./natural_images/" + filename)
+    except:
+        ft = open("retrieval_error_ids.txt", "a")
+        ft.write(id)
+        ft.close()
+        continue
