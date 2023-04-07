@@ -5,14 +5,8 @@ import pandas
 df = pandas.read_parquet("5b-010-mini.parquet")
 
 pipe = StableDiffusionPipeline.from_pretrained("./pretrained/ds-2-1-base-half", revision="fp16", torch_dtype=torch.float16)
-# pipe = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2-1-base", revision="fp16", torch_dtype=torch.float16)
 
 pipe = pipe.to("cuda")
-
-prompt = "abstract realism art fusion"
-image = pipe(prompt).images[0]
-
-image.save(f"random_image.png")
 
 for i in range(1000):
   sample = df.sample()
