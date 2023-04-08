@@ -22,6 +22,7 @@ for filename in gen_list:
     except:
         ft = open("retrieval_error_ids.txt", "a")
         ft.write(id)
+        ft.write("\n")
         ft.close()
         continue
 
@@ -40,5 +41,6 @@ for filename in gen_list:
     except:
         ft = open("retrieval_error_ids.txt", "a")
         ft.write(id)
+        ft.write("\n")
         ft.close()
         continue
