@@ -1,6 +1,10 @@
 1. install libraries
 pip install --upgrade torch diffusers transformers accelerate
 
-2. run get_pretrained_model.py
+2. run get_pretrained_model_half.py
 
-3. run generate_dataset_images.py
+3. create a new directory named "generated_images"
+
+4. create a new directory named "natural_images"
+
+5. run generate_dataset.py
